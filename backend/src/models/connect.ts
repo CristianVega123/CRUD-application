@@ -1,11 +1,16 @@
-import { Sequelize } from "sequelize";
-import { config } from "dotenv";
-config()
+import { sequelize } from './database/pool'
+import "./entity/User.models"
 
-// const sequelize = new Sequelize()
-function xd() {
-    console.log("que tal");
-    
+async function auth_database() {
+    try {
+        await sequelize.authenticate()
+        await sequelize.sync({force: true})
+        console.log('Connection has been established successfully');
+        
+    } catch (error) {
+        console.error('Unable to connect to the database: ', error);
+         
+    }
 }
 
-export default xd
+export { auth_database };
