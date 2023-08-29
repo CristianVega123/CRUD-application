@@ -1,13 +1,9 @@
-import { Router, Request, Response } from "express";
-import { createUsersSignIn } from '../controllers/createUsers'
+import { Router } from "express";
+import { validateUsers } from '../controllers/validateUsers'
+
+
 const router = Router();
 
-
-router.get("/data", (req: Request, res: Response) => {
-    res.send("login")
-})
-
-
-router.post("/signIn", createUsersSignIn )
+router.post("/login", validateUsers);
 
 export default router;

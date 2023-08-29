@@ -1,6 +1,11 @@
-import { Model, DataTypes } from "sequelize";
+import { Model, DataTypes, InferAttributes, InferCreationAttributes } from "sequelize";
 import { sequelize } from "../database/pool";
-class User extends Model {}
+class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
+  declare id: number | null;
+  declare username: string;
+  declare email: string;
+  declare password: string;
+}
 
 const ModelUser = User.init(
   {
@@ -8,8 +13,23 @@ const ModelUser = User.init(
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
-      allowNull: true,
+      allowNull: false
     },
+    username: {
+      type: DataTypes.STRING(30),
+      allowNull: false 
+    }, 
+    email : {
+      type: DataTypes.STRING(58),
+      unique: true,
+      validate: {
+        isEmail: true
+      }
+      
+    },
+    password: {
+      type: DataTypes.STRING(80)
+    }
   },
   {
     modelName: "User",

@@ -1,8 +1,12 @@
 import Express from "express";
 import { config } from "dotenv";
+import session from 'express-session'
+import cors from 'cors'
+import cookie from 'cookie-parser'
 
 //? import --> Routes
-import Login from "./routes/login.route";
+import SignIn from "./routes/signin.route";
+import LogIn from "./routes/login.route";
 
 //? connect Database 
 import { auth_database } from "./models/connect";
@@ -11,14 +15,19 @@ import { auth_database } from "./models/connect";
 
 config()
 const app = Express();
-
-
-app.use(Express.json())
+app.use(cors())
 app.use(Express.urlencoded({extended: false}))
-
+app.use(cookie())
+app.use(Express.json())
+app.use(session({
+    secret: process.env.SECRET_SESSION as string,
+    resave: true,
+    saveUninitialized: false, 
+}))
 
 //? Routes  
-app.use("/api", Login);
+app.use("/api", SignIn);
+app.use("/api", LogIn);
 
 const PORT = process.env.PORT_SERVER || 3200;
 
