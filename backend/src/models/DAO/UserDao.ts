@@ -32,7 +32,6 @@ class UserDao {
       }
     } catch (error: any) {
       if (error instanceof UniqueConstraintError) {
-        console.log(error.errors);
         return {
           status_error: 400,
           error_unique: error.errors[0].message,

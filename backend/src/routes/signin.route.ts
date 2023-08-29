@@ -4,8 +4,12 @@ const router = Router();
 
 
 router.get("/data", (req: Request, res: Response) => {
-    console.log(req.session!.user)
-    res.send(200)
+
+    if (req.user) {
+       res.json(req.user) 
+    } else {
+        res.sendStatus(401)
+    }
 })
 router.post("/signIn", createUsersSignIn )
 

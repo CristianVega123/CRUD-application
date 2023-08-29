@@ -1,9 +1,28 @@
 import { Router } from "express";
 import { validateUsers } from '../controllers/validateUsers'
+import passport from 'passport'
+import { localStrategy } from '../passport/Strategy'
+import { User } from "../models/entity/User.models";
 
 
 const router = Router();
 
-router.post("/login", validateUsers);
+passport.use(localStrategy)
+
+passport.serializeUser(function(user,done){
+    // console.log(user)
+    process.nextTick(function(){
+        done(null, user)
+    })
+})
+
+passport.deserializeUser(function(user: User, done){
+    console.log(user)
+    process.nextTick(function(){
+        done(null, user)
+    })
+})
+
+router.post("/login",passport.authenticate("local", {successRedirect: "https://www.passportjs.org/docs/"}));
 
 export default router;

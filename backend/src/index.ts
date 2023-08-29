@@ -3,6 +3,7 @@ import { config } from "dotenv";
 import session from 'express-session'
 import cors from 'cors'
 import cookie from 'cookie-parser'
+import passport from 'passport'
 
 //? import --> Routes
 import SignIn from "./routes/signin.route";
@@ -24,6 +25,8 @@ app.use(session({
     resave: true,
     saveUninitialized: false, 
 }))
+app.use(passport.initialize())
+app.use(passport.session())
 
 //? Routes  
 app.use("/api", SignIn);
