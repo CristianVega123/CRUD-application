@@ -1,11 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <meta charset="UTF-8"/>
+    <title>Dashboard Design | By Code Info</title>
+    <link rel="stylesheet" href="./style/style-dashboard.css"/>
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-    <h1>Dashboard</h1>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Cliente</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Personal</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Producto</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Mis Datos</span>
+                </a>
+            </li>
+            <li class="admin">
+                <a href="#">
+                    <i class="fa-solid fa-address-card"></i>
+                    <span>Administrador</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Primary</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user--info">
+                <div class="search--box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <img src="./images/img.jpg" alt="">
+            </div>
+        </div>
+        <div class="card--container">
+            <h3 class="main--title">DATOS DEL CLIENTE</h3>
+            <div class="card--wrapper">
+                <div class="card--image">
+                    <img src="./images/cliente.jpg" alt="">
+                </div>
+                <div class="card--button">
+                    <button>Agregar</button>
+                    <button>Consultar</button>
+                </div>
+            </div>
+            <div class="tabular--wrapper">
+                <h3 class="main-title">Tabla del Cliente</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Transaction Type</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>2023-05-01</td>
+                                    <td>Expenses</td>
+                                    <td>Office Supplies</td>
+                                    <td>$250</td>
+                                    <td>Office Expenses</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>2023-05-02</td>
+                                    <td>Income</td>
+                                    <td>Client Payment</td>
+                                    <td>$500</td>
+                                    <td>Sales</td>
+                                    <td>Completed</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7">*Solo se muestran los 5 ultimos registros*</td>
+                                </tr>
+                            </tfoot>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card--container">
+            <h3 class="main--title">DATOS DEL PERSONAL</h3>
+            <div class="card--wrapper">
+                <div class="card--image">
+                    <img src="./images/personal.jpg" alt="">
+                </div>
+                <div class="card--button">
+                    <button>Agregar</button>
+                    <button>Consultar</button>
+                </div>
+            </div>
+            <div class="tabular--wrapper">
+                <h3 class="main-title">Tabla del Personal</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Transaction Type</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>2023-05-01</td>
+                                    <td>Expenses</td>
+                                    <td>Office Supplies</td>
+                                    <td>$250</td>
+                                    <td>Office Expenses</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>2023-05-02</td>
+                                    <td>Income</td>
+                                    <td>Client Payment</td>
+                                    <td>$500</td>
+                                    <td>Sales</td>
+                                    <td>Completed</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7">*Solo se muestran los 5 ultimos registros*</td>
+                                </tr>
+                            </tfoot>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card--container">
+            <h3 class="main--title">DATOS DEL PRODUCTO</h3>
+            <div class="card--wrapper">
+                <div class="card--image">
+                    <img src="./images/producto.jpg" alt="">
+                </div>
+                <div class="card--button">
+                    <button>Agregar</button>
+                    <button>Consultar</button>
+                </div>
+            </div>
+            <div class="tabular--wrapper">
+                <h3 class="main-title">Tabla del Producto</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Transaction Type</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>2023-05-01</td>
+                                    <td>Expenses</td>
+                                    <td>Office Supplies</td>
+                                    <td>$250</td>
+                                    <td>Office Expenses</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>2023-05-02</td>
+                                    <td>Income</td>
+                                    <td>Client Payment</td>
+                                    <td>$500</td>
+                                    <td>Sales</td>
+                                    <td>Completed</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>2023-05-03</td>
+                                    <td>Expense</td>
+                                    <td>Travel Expenses</td>
+                                    <td>$250</td>
+                                    <td>Travel</td>
+                                    <td>Pending</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7">*Solo se muestran los 5 ultimos registros*</td>
+                                </tr>
+                            </tfoot>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card--container">
+            <h3 class="main--title">MIS DATOS</h3>
+            <div class="card--wrapper">
+                <div class="card--image">
+                    <img src="./images/usuario.jpg" alt="">
+                </div>
+                <div class="card--button">
+                    <button>Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
