@@ -63,9 +63,8 @@
                 <h2>Dashboard</h2>
             </div>
             <div class="user--info">
-                <div class="search--box">
-                    <i class="fa-solid fa-search"></i>
-                    <input type="text" placeholder="Search">
+                <div class="user--name">
+                    
                 </div>
                 <img src="./images/img.jpg" alt="">
             </div>
@@ -259,29 +258,31 @@
                         <div class="content-modal">
 
 
-                            <h2>Registrar Producto</h2>
-                            <hr style="height: 1px; background-color: #fff;">
+                            <h2>Agregar Producto</h2>
+                            
                             <form class="form" action="">
+                                <hr style="height: 1px; background-color: #fff;">
                                 <div class="form--div">
-                                    <label for="">Nombre:</label>
-                                    <input type="text">
-                                    <br>
-                                    <label for="">Precio:</label>
-                                    <input type="text">
-                                    <br>
-                                    <label for="">Cantidad:</label>
-                                    <input type="text">
-                                    <br>
-                                    <label for="">Marca:</label>
-                                    <input type="text">
+                                    <div class="form--div2">
+                                        <label for="">Nombre:</label>
+                                        <input type="text">
+                                        <br>
+                                        <label for="">Precio:</label>
+                                        <input type="text">
+                                        <br>
+                                        <label for="">Cantidad:</label>
+                                        <input type="text">
+                                        <br>
+                                        <label for="">Marca:</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <hr style="height: 1px; background-color: #fff;">
+                                <div class="btn">
+                                    <label for="btn-modal">Cerrar</label>
+                                    <button>Agregar</button>
                                 </div>
                             </form>
-                            <hr style="height: 1px; background-color: #fff;">
-
-                            <div class="btn">
-                                <label for="btn-modal">Cerrar</label>
-                                <button>Registrar</button>
-                            </div>
                             
                         </div>
                         <label for="btn-modal" class="cerrar-modal"></label>
@@ -289,7 +290,30 @@
                     <!-- modal-agregar (fin) -->
 
                     <!-- modal-consultar -->
-                    <label class="card--button__label">Consultar</label>
+                    <label class="card--button__label" for="btn-modal2">Consultar</label>
+
+                    <input type="checkbox" id="btn-modal2">
+                    <div class="container-modal2">
+                        <div class="content-modal2">
+
+
+                            <h2>Consultar Producto</h2>
+                            
+                            <hr style="height: 1px; background-color: #fff;">
+                            <div class="search--box">
+                                <i class="fa-solid fa-search"></i>
+                                <input type="text" placeholder="Search">
+                            </div>
+
+                            
+                            <hr style="height: 1px; background-color: #fff;">
+
+                            <div class="btn">
+                                <label for="btn-modal2">Cerrar</label>
+                            </div>
+                        </div>
+                        <label for="btn-modal2" class="cerrar-modal2"></label>
+                    </div>
                     <!-- modal-consultar (fin) -->
                 </div>
             </div>
