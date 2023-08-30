@@ -216,6 +216,7 @@ body::-webkit-scrollbar {
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
     transition: all 300ms ease;
 }
 .content-modal .btn button:hover {
@@ -228,6 +229,7 @@ body::-webkit-scrollbar {
     border-radius: 4px;
     cursor: pointer;
     transition: all 300ms ease;
+    text-align: center;
 }
 .content-modal .btn label:hover {
     background-color:#ff5a5a;
@@ -239,10 +241,10 @@ body::-webkit-scrollbar {
     top:0; left: 0;
     z-index: -1;
 }
-.form {
-    padding: 20px;
+.form--div {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
 }
 .form label {
     display: inline-block;
@@ -257,7 +259,6 @@ body::-webkit-scrollbar {
     margin: 10px 0;
     border-radius: 1rem;
     border: 3px solid #bcbcbc;
-    
 }
 
 /* ***** tabular section ***** */
