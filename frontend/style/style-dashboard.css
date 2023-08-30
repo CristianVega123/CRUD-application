@@ -372,3 +372,39 @@ tfoot td{
     background: none;
     cursor: pointer;
 }
+
+
+/* tabla para la ventana modal-consultar */
+.table-container2 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.table-container2 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container2 thead {
+    background: rgba(113, 99, 186, 255);
+    color: #fff;
+}
+.table-container2 th {
+    padding: 15px;
+    text-align: left;
+}
+.table-container2 tbody {
+    background: #f2f2f2;
+}
+.table-container2 td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+.table-container2 tr:nth-child(even) {
+    background: #fff;
+}
+.table-container2 button {
+    color: green;
+    background: none;
+    cursor: pointer;
+}
+
