@@ -10,11 +10,12 @@
       <input type="checkbox" id="chk" aria-hidden="true" />
 
 			<div class="login">
-				<form>
+				<form class="form-login">
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Login</button>
+					<!-- <input class="input-email" type="email" name="email" placeholder="Email"> -->
+					<input class="input-email" type="text" name="email" placeholder="Email">
+					<input class="input-password" type="password" name="password" placeholder="Password" >
+					<button class="btn-login">Login</button>
 				</form>
 			</div>
 
@@ -28,6 +29,7 @@
 					<button>Registrate</button>
 				</form>
 			</div>
-	</div>
+		</div>
+	<script src="./JS/login.js" type="module"></script>
 </body>
 </html>

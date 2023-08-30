@@ -16,17 +16,22 @@ import { auth_database } from "./models/connect";
 
 config()
 const app = Express();
-app.use(cors())
-app.use(Express.urlencoded({extended: false}))
+app.use(cors({
+    origin: ["http://127.0.0.1:5500", "http://localhost:4321"], 
+    credentials: true,
+
+}))
 app.use(cookie())
 app.use(Express.json())
 app.use(session({
     secret: process.env.SECRET_SESSION as string,
     resave: true,
-    saveUninitialized: false, 
+    saveUninitialized: true, 
+    cookie: {}
 }))
 app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.authenticate('session'))
+app.use(Express.urlencoded({extended: false}))
 
 //? Routes  
 app.use("/api", SignIn);
