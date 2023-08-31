@@ -59,39 +59,164 @@
                     <input type="checkbox" id="btn-modal">
                     <div class="container-modal">
                         <div class="content-modal">
-
-
                             <h2>Registrar Producto</h2>
                             <hr style="height: 1px; background-color: #fff;">
                             <form class="form" action="">
                                 <div class="form--div">
-                                    <label for="">Nombre:</label>
-                                    <input type="text">
-                                    <br>
-                                    <label for="">Precio:</label>
-                                    <input type="text">
-                                    <br>
-                                    <label for="">Cantidad:</label>
-                                    <input type="text">
-                                    <br>
-                                    <label for="">Marca:</label>
-                                    <input type="text">
+                                    <div>
+                                        <label for="">Nombre:</label>
+                                        <input type="text">
+                                        <br>
+                                        <label for="">Precio:</label>
+                                        <input type="text">
+                                        <br>
+                                        <label for="">Cantidad:</label>
+                                        <input type="text">
+                                        <br>
+                                        <label for="">Marca:</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <hr style="height: 1px; background-color: #fff;">
+                                <div class="btn">
+                                    <label for="btn-modal">Cerrar</label>
+                                    <button>Registrar</button>
                                 </div>
                             </form>
-                            <hr style="height: 1px; background-color: #fff;">
-
-                            <div class="btn">
-                                <label for="btn-modal">Cerrar</label>
-                                <button>Registrar</button>
-                            </div>
-                            
                         </div>
                         <label for="btn-modal" class="cerrar-modal"></label>
                     </div>
                     <!-- modal-agregar (fin) -->
 
                     <!-- modal-consultar -->
-                    <label class="card--button__label">Consultar</label>
+                    
+                    <label class="card--button__label" for="btn-modal2">Consultar</label>
+
+                    <input type="checkbox" id="btn-modal2">
+                    <div class="container-modal2">
+                        <div class="content-modal2">
+                            <h2>Registrar Producto</h2>
+                            <hr style="height: 1px; background-color: #fff;">
+                            <div class="search--box">
+                                <i class="fa-solid fa-search"></i>
+                                <input type="text" placeholder="Search">
+                            </div>
+                            <div class="table-container2">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th>Marca</th>
+                                            <th>Accion</th>
+                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>00001</td>
+                                                <td>Arroz</td>
+                                                <td>$50</td>
+                                                <td>100</td>
+                                                <td>Costeño</td>
+                                                <td>
+                                                    <label for="btn-modal3">Edit</label> 
+                                                    <button style="color: red;">Delet</button>
+                                                </td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td>00002</td>
+                                                <td>Azucar</td>
+                                                <td>$20</td>
+                                                <td>100</td>
+                                                <td>Rubia</td>
+                                                <td>
+                                                    <label for="btn-modal3">Edit</label> 
+                                                    <button style="color: red;">Delet</button>
+                                                </td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>
+                                                    <label for="btn-modal3">Edit</label> 
+                                                    <button style="color: red;">Delet</button>
+                                                </td>
+                                            </tr>
+            
+                                            <tr>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>
+                                                    <label for="btn-modal3">Edit</label> 
+                                                    <button style="color: red;">Delet</button>
+                                                </td>
+                                            </tr>
+            
+                                            <tr>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>
+                                                    <label for="btn-modal3">Edit</label>
+                                                    <input type="checkbox" id="btn-modal3">
+                                                    <div class="container-modal3">
+                                                        <div class="content-modal3">
+                                                            <h2>Editar Producto</h2>
+                                                            <div class="form">
+                                                                <hr style="height: 1px; background-color: #fff;">
+                                                                <div class="form--div">
+                                                                    <div class="form--div2">
+                                                                        <label for="">ID:</label>
+                                                                        <input type="text" readonly>
+                                                                        <br>
+                                                                        <label for="">Nombre:</label>
+                                                                        <input type="text">
+                                                                        <br>
+                                                                        <label for="">Precio:</label>
+                                                                        <input type="text">
+                                                                        <br>
+                                                                        <label for="">Cantidad:</label>
+                                                                        <input type="text">
+                                                                        <br>
+                                                                        <label for="">Marca:</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                </div>
+                                                                <hr style="height: 1px; background-color: #fff;">
+                                                                <div class="btn">
+                                                                    <label for="btn-modal3">Cerrar</label>
+                                                                    <button>Editar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <label for="btn-modal3" class="cerrar-modal"></label>
+                                                    </div> 
+                                                <button style="color: red;">Delet</button>
+                                            </td>
+                                            </tr>
+                                        </tbody>
+                                    </thead>
+                                </table>
+                            </div>
+                            <hr style="height: 1px; background-color: #fff;">
+                            <div class="btn">
+                                <label for="btn-modal2">Cerrar</label>
+                            </div>
+                        </div>
+                        <label for="btn-modal2" class="cerrar-modal"></label>
+                    </div>
+                    
                     <!-- modal-consultar (fin) -->
                 </div>
             </div>
@@ -115,7 +240,10 @@
                                     <td>$50</td>
                                     <td>100</td>
                                     <td>Costeño</td>
-                                    <td><button>Edit</button> <button style="color: red;">Delet</button></td>
+                                    <td>
+                                        <label for="btn-modal3">Edit</label> 
+                                        <button style="color: red;">Delet</button>
+                                    </td>
                                 </tr>
     
                                 <tr>
