@@ -16,7 +16,10 @@ export type ObjError = {
 
 export interface IResponseCreated {
     status: number; 
-    user ?: IDataUser
+    user ?: {
+        id: number | undefined
+        username: string
+    } 
 }
 
 export type InfoCreateUser = ObjError | IResponseCreated;
@@ -26,3 +29,9 @@ export interface SessionDataCustom {
     user: string;
 }
 
+export interface ICreateProduct extends SessionDataCustom {
+    nombre: string;
+    precio: number;
+    cantidad: number;
+    marca: string
+}

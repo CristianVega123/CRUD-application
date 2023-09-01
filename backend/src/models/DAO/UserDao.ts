@@ -1,4 +1,5 @@
 import { IDataUser, IResponseCreated, ObjError } from "../../types/Interface";
+import { sequelize } from "../database/pool";
 import { User } from "../entity/User.models";
 import { UniqueConstraintError } from "sequelize";
 
@@ -17,13 +18,24 @@ class UserDao {
   ): Promise<IResponseCreated | ObjError> {
     try {
       let user;
+      let userDao
       if (this.instaceModelUser !== undefined) {
-        user = await this.instaceModelUser.create(data);
+
+        let t = await sequelize.transaction()
+        user = await this.instaceModelUser.create(data, {
+          transaction: t
+        })
+        t.commit()
+
+        userDao = {
+          id: user.dataValues.id, 
+          username : user.dataValues.username
+        }
       }
       if (user) {
         return {
           status: 201,
-          user: data,
+          user: userDao,
         };
       } else {
         return {
