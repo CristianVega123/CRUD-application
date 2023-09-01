@@ -25,7 +25,7 @@ export interface IResponseCreated {
 export type InfoCreateUser = ObjError | IResponseCreated;
 
 export interface SessionDataCustom {
-    id: string;
+    id: number | undefined;
     user: string;
 }
 
@@ -35,3 +35,25 @@ export interface ICreateProduct extends SessionDataCustom {
     cantidad: number;
     marca: string
 }
+
+export interface DataCreated {
+    id: number | undefined
+    nombre: string;
+    precio: number;
+    cantidad: number;
+    marca: string
+}
+
+export interface DataUpdate {
+    nombre ?: string;
+    precio?: number;
+    cantidad?: number;
+    marca?: string
+}
+
+export interface SessionFrontend {
+    idProduct: number,
+    userId: number | string;
+}
+
+export type RequestUpdate = DataUpdate & SessionFrontend

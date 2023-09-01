@@ -5,6 +5,7 @@ class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
   declare username: string;
   declare email: string;
   declare password: string;
+
 }
 
 const ModelUser = User.init(

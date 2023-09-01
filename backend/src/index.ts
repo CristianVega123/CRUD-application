@@ -9,6 +9,7 @@ import passport from 'passport'
 import SignIn from "./routes/signin.route";
 import LogIn from "./routes/login.route";
 import LogOut from "./routes/logout.route";
+import CRUD from "./routes/crud.route";
 
 //? connect Database 
 import { auth_database } from "./models/connect";
@@ -38,6 +39,7 @@ app.use(Express.urlencoded({extended: false}))
 app.use("/api", SignIn);
 app.use("/api", LogIn);
 app.use("/api", LogOut);
+app.use("/api", CRUD);
 
 const PORT = process.env.PORT_SERVER || 3200;
 

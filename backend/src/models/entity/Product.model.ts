@@ -2,19 +2,21 @@ import { Model, DataTypes, InferAttributes, InferCreationAttributes} from 'seque
 import { sequelize } from "../database/pool";
 
 class Product extends Model<InferAttributes<Product>, InferCreationAttributes<Product>> {
-    declare id: number | undefined; 
+    declare id_product: number | undefined; 
     declare nombre: string; 
     declare precio: number;
     declare cantidad: number;
     declare marca: string; 
+    declare userId: number
+
 } 
 
 Product.init({
-    id: {
+    id_product: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true, 
-        allowNull: true
+        // allowNull: true
     }, 
     nombre: {
         type: DataTypes.STRING(50),
@@ -31,6 +33,9 @@ Product.init({
     marca: {
         type: DataTypes.STRING(60),
         allowNull: false
+    }, 
+    userId: {
+        type: DataTypes.INTEGER
     }
 }, {
     modelName: "Products",

@@ -4,6 +4,10 @@ import { Product } from '../entity/Product.model'
 
 // Uno a mucho ----> Usuario va a tener muchos productos creados
 
-User.hasMany(Product)
+// User.hasMany(Product, {
+//     foreignKey: "userId"
+// })
 
-Product.belongsTo(User)
+// Product.belongsTo(User, {
+//     foreignKey: "userId"
+// })
