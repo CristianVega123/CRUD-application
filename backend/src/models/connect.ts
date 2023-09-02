@@ -1,7 +1,6 @@
 import { sequelize } from "./database/pool";
 import "./entity/User.models";
 import "./entity/Product.model"
-import "./entity/association"
 
 async function auth_database() {
   try {

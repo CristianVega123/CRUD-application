@@ -1,4 +1,3 @@
-import { user } from "@nextui-org/react";
 import { DataCreated, DataUpdate, SessionFrontend } from "../../types/Interface";
 import { Product } from "../entity/Product.model";
 

@@ -20,7 +20,7 @@ Necesitas tener instalados:
     #Comprobar si tienes typescript descargado
     tsc -v
 ```
-3. MySQL, acá un tutorial de como descargarlo [✔](https://www.youtube.com/watch?v=Pj5C7rkGrtc)
+3. MySQL, acá un tutorial de como descargarlo [✔](https://www.youtube.com/watch?v=_K2nOYwOq1E)
 
 
 
