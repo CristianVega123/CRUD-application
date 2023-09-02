@@ -184,6 +184,7 @@ export default function Dashboard() {
     const newData = await uploadData(data.id);
     setDataDB([...newData]);
     console.log(newData);
+    window.location.reload()
   };
   const changeEdit = (event: React.MouseEvent) => {
     const elementbtn = event.target as HTMLElement;
@@ -325,7 +326,7 @@ export default function Dashboard() {
                                     <td>
                                       <label
                                         htmlFor="btn-modal3"
-                                        onClick={sentEditAny}
+                                        onClick={changeEdit}
                                       >
                                         Edit
                                       </label>

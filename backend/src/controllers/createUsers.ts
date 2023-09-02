@@ -21,7 +21,6 @@ async function createUsersSignIn(req: Request, res: Response, next: NextFunction
     email, 
     password: passwordHash
   })
-  // console.log(responseDao)
   if (isResponseCreated(responseDao)) {
     if (responseDao.user) {
       let user = {
@@ -35,10 +34,10 @@ async function createUsersSignIn(req: Request, res: Response, next: NextFunction
           next(err) 
         }
 
-        res.sendStatus(201)
+        return res.sendStatus(201)
       })
   } else {
-    res.json(responseDao)
+    return res.json(responseDao)
   }
 
 

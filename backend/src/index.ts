@@ -19,9 +19,8 @@ import { auth_database } from "./models/connect";
 config()
 const app = Express();
 app.use(cors({
-    origin: ["http://127.0.0.1:5500", "http://localhost:4321", "http://localhost:5173"], 
+    origin: ["http://localhost:5173"], 
     credentials: true,
-
 }))
 app.use(cookie())
 app.use(Express.json())
